@@ -50,7 +50,7 @@ generates a conforming `struct` named `tag` in namespace `Plato::group`.
 Additionally:
 
 ```cpp
-DEFINE_PLATO_CONSTANT(group, tag, siValue, siUnit, cgsValue, cgsUnit, desc)
+REGISTER_PLATO_CONSTANT(group, tag, siValue, siUnit, cgsValue, cgsUnit, desc)
 ```
 
 registers the constant in the `ConstantRegister` as `group::tag`.
