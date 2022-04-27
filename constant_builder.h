@@ -2,12 +2,19 @@
 #define _PLATOCONSTANTS_CONSTANT_BUILDER_H
 
 #include <map>
+#include <stdexcept>
 #include <string>
 
 namespace Plato {
 
 /**
- * @brief A value and unit.
+ * @brief A value with error and unit.
+ * @details
+ * The value can be accessed as `.value` or directly by implicit cast to `double`, e.g.:
+ * \code
+ * Quantity pi {3.14, 0.01, "rad"};
+ * double twoPi = 2. * pi;
+ * \endcode
  */
 struct Quantity {
 
@@ -17,9 +24,19 @@ struct Quantity {
   double value;
 
   /**
+   * @brief The error standard deviation.
+   */
+  double stdev;
+
+  /**
    * @brief The unit.
    */
   const char* unit;
+
+  /**
+   * @brief The reference paper.
+   */
+  const char* reference = nullptr;
 
   /**
    * @brief Slice the quantity as its value.
