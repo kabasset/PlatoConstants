@@ -180,8 +180,8 @@ private:
 #define DEFINE_PLATO_CONSTANT(group, tag, siValue, siUnit, cgsValue, cgsUnit, desc) \
   namespace group { \
   struct tag { \
-    static constexpr Quantity si = {siValue, #siUnit}; \
-    static constexpr Quantity cgs = {cgsValue, #cgsUnit}; \
+    static constexpr Quantity si = {siValue, 0, #siUnit}; \
+    static constexpr Quantity cgs = {cgsValue, 0, #cgsUnit}; \
     static constexpr const char* description = #desc; \
   }; \
   }
