@@ -2,6 +2,10 @@
 
 A light framework for constant definition.
 
+## License
+
+[LGPL-3.0-or-later](LICENSE.md)
+
 ## One constant
 
 Constants are expressed in SI and CGS unit systems as `Quantity`s,
@@ -27,7 +31,7 @@ Conversions are not implemented; this could be added later through Boost.Units.
 
 ## A lot of constants
 
-Constants can be registered, so that they are look up by name, in a `ConstantRegister`,
+Constants can be registered, so that they are looked up by name, in a `ConstantRegister`,
 which is a global constant singleton filled at compile time.
 This provides run time access to constants, and a few short cuts, e.g.:
 
@@ -81,6 +85,8 @@ An example such file is provided for reference.
 You can also check the example program, `example.cpp` which is built and run as:
 
 ```sh
+mkdir build ; cd build
+cmake ..
 make
 ./example
 ```
